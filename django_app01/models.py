@@ -1,5 +1,11 @@
 from django.db import models
 
+class StatusChoices(models.TextChoices):
+    NEW = 'new', 'Новая'
+    IN_PROGRESS = 'in_progress', 'В процессе'
+    DONE = 'done', 'Выполнена'
+
+
 class Category(models.Model):
     name = models.CharField(max_length=100, verbose_name="Название категории")
 
@@ -7,21 +13,16 @@ class Category(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = "Категория"
-        verbose_name_plural = "Категории"
+        db_table = 'task_manager_category'
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
+        unique_together = ('name',)
 
 
 class Task(models.Model):
-    class StatusChoices(models.TextChoices):
-        NEW = 'New', 'New'
-        IN_PROGRESS = 'In progress', 'In progress'
-        PENDING = 'Pending', 'Pending'
-        BLOCKED = 'Blocked', 'Blocked'
-        DONE = 'Done', 'Done'
-
     title = models.CharField(max_length=200, verbose_name="Название задачи")
     description = models.TextField(verbose_name="Описание задачи")
-    categories = models.ManyToManyField(Category, related_name="tasks", verbose_name="Категории")
+    categories = models.ManyToManyField(Category, related_name='tasks', verbose_name="Категории")
     status = models.CharField(
         max_length=20,
         choices=StatusChoices.choices,
@@ -35,21 +36,21 @@ class Task(models.Model):
         return self.title
 
     class Meta:
-        # Уникальность названия для конкретной даты (используем дату из created_at или deadline)
-        # В данном случае, так как created_at создается автоматически, логичнее проверять по ней
-        unique_together = ('title', 'created_at')
-        verbose_name = "Задача"
-        verbose_name_plural = "Задачи"
+        db_table = 'task_manager_task'  # ОШИБКА БЫЛА ТУТ (стояло subtask)
+        ordering = ['-created_at']
+        verbose_name = 'Task'
+        verbose_name_plural = 'Tasks'
+        unique_together = ('title',)
 
 
 class SubTask(models.Model):
     title = models.CharField(max_length=200, verbose_name="Название подзадачи")
     description = models.TextField(verbose_name="Описание подзадачи")
-    task = models.ForeignKey(Task, on_delete=models.CASCADE, related_name="subtasks", verbose_name="Основная задача")
+    task = models.ForeignKey(Task, on_delete=models.CASCADE, related_name='subtasks', verbose_name="Основная задача")
     status = models.CharField(
         max_length=20,
-        choices=Task.StatusChoices.choices,
-        default=Task.StatusChoices.NEW,
+        choices=StatusChoices.choices,  # Переиспользуем статусы
+        default=StatusChoices.NEW,
         verbose_name="Статус"
     )
     deadline = models.DateTimeField(verbose_name="Дедлайн")
@@ -59,5 +60,8 @@ class SubTask(models.Model):
         return self.title
 
     class Meta:
-        verbose_name = "Подзадача"
-        verbose_name_plural = "Подзадачи"
+        db_table = 'task_manager_subtask'
+        ordering = ['-created_at']
+        verbose_name = 'SubTask'
+        verbose_name_plural = 'SubTasks'
+        unique_together = ('title',)
