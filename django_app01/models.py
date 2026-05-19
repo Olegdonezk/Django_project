@@ -36,7 +36,7 @@ class Task(models.Model):
         return self.title
 
     class Meta:
-        db_table = 'task_manager_task'  # ОШИБКА БЫЛА ТУТ (стояло subtask)
+        db_table = 'task_manager_task'
         ordering = ['-created_at']
         verbose_name = 'Task'
         verbose_name_plural = 'Tasks'
