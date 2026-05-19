@@ -3,7 +3,7 @@ import django
 from datetime import timedelta
 from django.utils import timezone
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "DjangoProject2.settings")
 django.setup()
 
 from django_app01.models import Task, SubTask
