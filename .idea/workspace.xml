@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3dd7d45-1440-46a0-b731-b21cc1deb5bd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_app01/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_app01/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_app01/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_app01/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django_app01/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_app01/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +127,7 @@
       <workItem from="1779226268990" duration="2549000" />
       <workItem from="1779717680339" duration="1606000" />
       <workItem from="1780217428793" duration="3600000" />
-      <workItem from="1780595435165" duration="796000" />
+      <workItem from="1780595435165" duration="1319000" />
     </task>
     <servers />
   </component>
