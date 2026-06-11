@@ -2,12 +2,10 @@ from django.urls import path
 
 from .views import (
     hello,
-    create_task,
-    get_tasks,
-    get_task,
     task_statistics,
     get_tasks_by_weekday,
-    get_subtasks_filtered,
+    TaskListCreateView,
+    TaskDetailView,
     SubTaskListCreateView,
     SubTaskDetailUpdateDeleteView,
 )
@@ -15,16 +13,33 @@ from .views import (
 urlpatterns = [
     path('', hello),
 
-    # Task
-    path('tasks/create/', create_task),
-    path('tasks/', get_tasks),
-    path('tasks/<int:task_id>/', get_task),
-    path('tasks/statistics/', task_statistics),
+    # Tasks CRUD
+    path(
+        'tasks/',
+        TaskListCreateView.as_view(),
+        name='task-list-create'
+    ),
+    path(
+        'tasks/<int:pk>/',
+        TaskDetailView.as_view(),
+        name='task-detail'
+    ),
 
+    # Statistics (оставляем как есть)
+    path(
+        'tasks/statistics/',
+        task_statistics,
+        name='task-statistics'
+    ),
 
-    path('tasks/by-weekday/', get_tasks_by_weekday),
+    # Дополнительный эндпойнт
+    path(
+        'tasks/by-weekday/',
+        get_tasks_by_weekday,
+        name='tasks-by-weekday'
+    ),
 
-
+    # SubTasks CRUD
     path(
         'subtasks/',
         SubTaskListCreateView.as_view(),
@@ -35,6 +50,4 @@ urlpatterns = [
         SubTaskDetailUpdateDeleteView.as_view(),
         name='subtask-detail-update-delete'
     ),
-
-    path('subtasks/filter/', get_subtasks_filtered),
 ]
