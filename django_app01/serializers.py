@@ -4,15 +4,21 @@ from .models import Task, SubTask, Category
 
 
 class CategorySerializer(serializers.ModelSerializer):
+    task_count = serializers.SerializerMethodField(read_only=True)
+
     class Meta:
         model = Category
-        fields = "__all__"
+        fields = ['id', 'name', 'is_deleted', 'deleted_at', 'task_count']
+        read_only_fields = ['is_deleted', 'deleted_at']
+
+    def get_task_count(self, obj):
+        return obj.tasks.count()
 
 
 class CategoryCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = "__all__"
+        fields = ['name']
 
     def create(self, validated_data):
         name = validated_data.get("name")
@@ -38,6 +44,7 @@ class CategoryCreateSerializer(serializers.ModelSerializer):
             )
 
         return super().update(instance, validated_data)
+
 
 
 class SubTaskSerializer(serializers.ModelSerializer):

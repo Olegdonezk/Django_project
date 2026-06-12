@@ -1,4 +1,40 @@
 from django.db import models
+from django.utils import timezone
+
+
+
+class SoftDeleteManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(is_deleted=False)
+
+
+class SoftDeleteModel(models.Model):
+    is_deleted = models.BooleanField(default=False, verbose_name="Удалено")
+    deleted_at = models.DateTimeField(null=True, blank=True, verbose_name="Дата удаления")
+
+    objects = SoftDeleteManager()
+    all_objects = models.Manager()
+
+    class Meta:
+        abstract = True
+
+    def delete(self, using=None, keep_parents=False):
+        """Мягкое удаление"""
+        self.is_deleted = True
+        self.deleted_at = timezone.now()
+        self.save()
+
+    def restore(self):
+        """Восстановление записи"""
+        self.is_deleted = False
+        self.deleted_at = None
+        self.save()
+
+    def hard_delete(self):
+        """Жёсткое удаление из базы"""
+        super().delete()
+
+
 
 class StatusChoices(models.TextChoices):
     NEW = 'new', 'Новая'
@@ -6,8 +42,11 @@ class StatusChoices(models.TextChoices):
     DONE = 'done', 'Выполнена'
 
 
-class Category(models.Model):
-    name = models.CharField(max_length=100, verbose_name="Название категории")
+class Category(SoftDeleteModel):
+    name = models.CharField(
+        max_length=100,
+        verbose_name="Название категории"
+    )
 
     def __str__(self):
         return self.name
@@ -22,7 +61,11 @@ class Category(models.Model):
 class Task(models.Model):
     title = models.CharField(max_length=200, verbose_name="Название задачи")
     description = models.TextField(verbose_name="Описание задачи")
-    categories = models.ManyToManyField(Category, related_name='tasks', verbose_name="Категории")
+    categories = models.ManyToManyField(
+        Category,
+        related_name='tasks',
+        verbose_name="Категории"
+    )
     status = models.CharField(
         max_length=20,
         choices=StatusChoices.choices,
@@ -46,10 +89,15 @@ class Task(models.Model):
 class SubTask(models.Model):
     title = models.CharField(max_length=200, verbose_name="Название подзадачи")
     description = models.TextField(verbose_name="Описание подзадачи")
-    task = models.ForeignKey(Task, on_delete=models.CASCADE, related_name='subtasks', verbose_name="Основная задача")
+    task = models.ForeignKey(
+        Task,
+        on_delete=models.CASCADE,
+        related_name='subtasks',
+        verbose_name="Основная задача"
+    )
     status = models.CharField(
         max_length=20,
-        choices=StatusChoices.choices,  # Переиспользуем статусы
+        choices=StatusChoices.choices,
         default=StatusChoices.NEW,
         verbose_name="Статус"
     )

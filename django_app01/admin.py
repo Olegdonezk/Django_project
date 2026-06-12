@@ -3,7 +3,8 @@ from .models import Task, SubTask, Category
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name')
+    list_display = ('id', 'name', 'is_deleted', 'deleted_at')
+    list_filter = ('is_deleted', 'deleted_at')
     search_fields = ('name',)
 
 class SubTaskInline(admin.TabularInline):
