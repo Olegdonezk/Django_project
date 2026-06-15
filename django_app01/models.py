@@ -55,9 +55,14 @@ class Category(SoftDeleteModel):
         db_table = 'task_manager_category'
         verbose_name = 'Category'
         verbose_name_plural = 'Categories'
-        unique_together = ('name',)
 
-
+        constraints = [
+            models.UniqueConstraint(
+                fields=['name'],
+                condition=models.Q(is_deleted=False),
+                name='unique_active_category_name'
+            )
+        ]
 class Task(models.Model):
     title = models.CharField(max_length=200, verbose_name="Название задачи")
     description = models.TextField(verbose_name="Описание задачи")

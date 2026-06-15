@@ -13,7 +13,7 @@ from .views import (
 )
 
 router = DefaultRouter()
-router.register(r'categories', CategoryViewSet, basename='category')
+router.register(r'api/categories', CategoryViewSet, basename='category')
 
 urlpatterns = [
     path('', hello),

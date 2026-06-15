@@ -35,7 +35,6 @@ class TaskAdmin(admin.ModelAdmin):
 
 @admin.register(SubTask)
 class SubTaskAdmin(admin.ModelAdmin):
-    # Выводим ID, Название, Основную задачу, Статус, Дедлайн и Дату создания
     list_display = ('id', 'title', 'task', 'status', 'deadline', 'created_at')
     list_filter = ('status', 'created_at', 'task')
     search_fields = ('title', 'description')
