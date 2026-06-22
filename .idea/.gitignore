@@ -1,8 +1,42 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-# Editor-based HTTP Client requests
-/httpRequests/
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Django
+db.sqlite3
+*.log
+
+# Static & media (если не хранишь в репо)
+staticfiles/
+media/
+
+# Environment variables (ВАЖНО)
+.env
+
+# IDE (PyCharm)
+.idea/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Tests / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/
+
+# Node (если вдруг будет фронт)
+node_modules/
