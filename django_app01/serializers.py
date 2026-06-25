@@ -48,6 +48,8 @@ class CategoryCreateSerializer(serializers.ModelSerializer):
 
 
 class SubTaskSerializer(serializers.ModelSerializer):
+    owner = serializers.ReadOnlyField(source="owner.username")
+
     class Meta:
         model = SubTask
         fields = "__all__"
@@ -62,6 +64,8 @@ class SubTaskCreateSerializer(serializers.ModelSerializer):
 
 
 class TaskSerializer(serializers.ModelSerializer):
+    owner = serializers.ReadOnlyField(source="owner.username")
+
     class Meta:
         model = Task
         fields = "__all__"

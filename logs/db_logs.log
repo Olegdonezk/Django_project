@@ -83,3 +83,153 @@ DEBUG 2026-06-15 21:10:47,458 utils 12192 32200 (0.000)
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None; alias=default
 DEBUG 2026-06-15 21:10:47,461 utils 12192 32200 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2026-06-22 14:24:03,557 utils 33204 26900 (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+DEBUG 2026-06-22 14:24:03,561 utils 33204 26900 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2026-06-22 14:24:06,837 utils 15232 12920 (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+DEBUG 2026-06-22 14:24:06,840 utils 15232 12920 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2026-06-22 14:24:06,841 utils 15232 12920 (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+DEBUG 2026-06-22 14:24:06,841 utils 15232 12920 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2026-06-22 14:24:06,854 utils 15232 12920 (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+DEBUG 2026-06-22 14:24:06,854 utils 15232 12920 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2026-06-22 14:24:06,858 utils 15232 12920 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+DEBUG 2026-06-22 14:24:06,859 utils 15232 12920 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" IN ('logentry')); args=('admin', 'logentry'); alias=default
+DEBUG 2026-06-22 14:24:06,860 utils 15232 12920 (0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(1,); alias=default
+DEBUG 2026-06-22 14:24:06,861 utils 15232 12920 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+DEBUG 2026-06-22 14:24:06,861 utils 15232 12920 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+DEBUG 2026-06-22 14:24:06,862 utils 15232 12920 (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" IN ('permission', 'user', 'group')); args=('auth', 'permission', 'user', 'group'); alias=default
+DEBUG 2026-06-22 14:24:06,863 utils 15232 12920 (0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(2, 3, 4); alias=default
+DEBUG 2026-06-22 14:24:06,864 utils 15232 12920 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+DEBUG 2026-06-22 14:24:06,864 utils 15232 12920 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+DEBUG 2026-06-22 14:24:06,865 utils 15232 12920 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" IN ('contenttype')); args=('contenttypes', 'contenttype'); alias=default
+DEBUG 2026-06-22 14:24:06,865 utils 15232 12920 (0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(5,); alias=default
+DEBUG 2026-06-22 14:24:06,866 utils 15232 12920 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+DEBUG 2026-06-22 14:24:06,866 utils 15232 12920 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+DEBUG 2026-06-22 14:24:06,867 utils 15232 12920 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" IN ('session')); args=('sessions', 'session'); alias=default
+DEBUG 2026-06-22 14:24:06,868 utils 15232 12920 (0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(6,); alias=default
+DEBUG 2026-06-22 14:24:06,868 utils 15232 12920 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+DEBUG 2026-06-22 14:24:06,868 utils 15232 12920 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'django_app01'; args=('django_app01',); alias=default
+DEBUG 2026-06-22 14:24:06,869 utils 15232 12920 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'django_app01' AND "django_content_type"."model" IN ('task', 'subtask', 'category')); args=('django_app01', 'task', 'subtask', 'category'); alias=default
+DEBUG 2026-06-22 14:24:06,870 utils 15232 12920 (0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8, 9, 7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(8, 9, 7); alias=default
+DEBUG 2026-06-22 14:24:06,870 utils 15232 12920 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'django_app01'; args=('django_app01',); alias=default
+DEBUG 2026-06-22 14:24:11,663 utils 33636 33464 (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+DEBUG 2026-06-22 14:24:11,665 utils 33636 33464 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2026-06-23 12:31:56,702 utils 34648 29684 (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+DEBUG 2026-06-23 12:31:56,706 utils 34648 29684 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2026-06-23 12:33:22,763 utils 21740 35740 (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+DEBUG 2026-06-23 12:33:22,765 utils 21740 35740 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2026-06-23 12:33:22,766 utils 21740 35740 (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+DEBUG 2026-06-23 12:33:22,766 utils 21740 35740 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2026-06-23 12:33:26,362 utils 35028 16660 (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+DEBUG 2026-06-23 12:33:26,364 utils 35028 16660 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2026-06-23 12:35:53,751 utils 34160 11516 (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+DEBUG 2026-06-23 12:35:53,754 utils 34160 11516 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2026-06-23 12:35:58,441 utils 19540 37416 (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+DEBUG 2026-06-23 12:35:58,444 utils 19540 37416 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2026-06-23 12:35:58,444 utils 19540 37416 (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+DEBUG 2026-06-23 12:35:58,445 utils 19540 37416 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2026-06-23 12:35:58,458 utils 19540 37416 (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+DEBUG 2026-06-23 12:35:58,458 utils 19540 37416 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2026-06-23 12:35:58,464 utils 19540 37416 (0.001) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+DEBUG 2026-06-23 12:35:58,465 utils 19540 37416 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" IN ('logentry')); args=('admin', 'logentry'); alias=default
+DEBUG 2026-06-23 12:35:58,467 utils 19540 37416 (0.001) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(1,); alias=default
+DEBUG 2026-06-23 12:35:58,468 utils 19540 37416 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+DEBUG 2026-06-23 12:35:58,469 utils 19540 37416 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+DEBUG 2026-06-23 12:35:58,469 utils 19540 37416 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" IN ('user', 'group', 'permission')); args=('auth', 'user', 'group', 'permission'); alias=default
+DEBUG 2026-06-23 12:35:58,470 utils 19540 37416 (0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(2, 3, 4); alias=default
+DEBUG 2026-06-23 12:35:58,471 utils 19540 37416 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+DEBUG 2026-06-23 12:35:58,472 utils 19540 37416 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+DEBUG 2026-06-23 12:35:58,473 utils 19540 37416 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" IN ('contenttype')); args=('contenttypes', 'contenttype'); alias=default
+DEBUG 2026-06-23 12:35:58,473 utils 19540 37416 (0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(5,); alias=default
+DEBUG 2026-06-23 12:35:58,474 utils 19540 37416 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+DEBUG 2026-06-23 12:35:58,474 utils 19540 37416 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+DEBUG 2026-06-23 12:35:58,475 utils 19540 37416 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" IN ('session')); args=('sessions', 'session'); alias=default
+DEBUG 2026-06-23 12:35:58,475 utils 19540 37416 (0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(6,); alias=default
+DEBUG 2026-06-23 12:35:58,476 utils 19540 37416 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+DEBUG 2026-06-23 12:35:58,476 utils 19540 37416 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'django_app01'; args=('django_app01',); alias=default
+DEBUG 2026-06-23 12:35:58,477 utils 19540 37416 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'django_app01' AND "django_content_type"."model" IN ('task', 'subtask', 'category')); args=('django_app01', 'task', 'subtask', 'category'); alias=default
+DEBUG 2026-06-23 12:35:58,477 utils 19540 37416 (0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8, 9, 7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(8, 9, 7); alias=default
+DEBUG 2026-06-23 12:35:58,478 utils 19540 37416 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'django_app01'; args=('django_app01',); alias=default
+DEBUG 2026-06-23 14:46:34,406 utils 29148 32260 (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+DEBUG 2026-06-23 14:46:34,410 utils 29148 32260 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2026-06-23 14:46:50,716 utils 25724 21956 (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+DEBUG 2026-06-23 14:46:50,719 utils 25724 21956 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2026-06-23 14:46:50,720 utils 25724 21956 (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+DEBUG 2026-06-23 14:46:50,720 utils 25724 21956 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2026-06-23 14:46:50,733 utils 25724 21956 (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+DEBUG 2026-06-23 14:46:50,734 utils 25724 21956 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2026-06-23 14:46:50,735 utils 25724 21956 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+DEBUG 2026-06-23 14:46:50,736 utils 25724 21956 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" IN ('logentry')); args=('admin', 'logentry'); alias=default
+DEBUG 2026-06-23 14:46:50,737 utils 25724 21956 (0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(1,); alias=default
+DEBUG 2026-06-23 14:46:50,738 utils 25724 21956 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+DEBUG 2026-06-23 14:46:50,738 utils 25724 21956 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+DEBUG 2026-06-23 14:46:50,739 utils 25724 21956 (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" IN ('user', 'group', 'permission')); args=('auth', 'user', 'group', 'permission'); alias=default
+DEBUG 2026-06-23 14:46:50,741 utils 25724 21956 (0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(2, 3, 4); alias=default
+DEBUG 2026-06-23 14:46:50,741 utils 25724 21956 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+DEBUG 2026-06-23 14:46:50,742 utils 25724 21956 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+DEBUG 2026-06-23 14:46:50,742 utils 25724 21956 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" IN ('contenttype')); args=('contenttypes', 'contenttype'); alias=default
+DEBUG 2026-06-23 14:46:50,743 utils 25724 21956 (0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(5,); alias=default
+DEBUG 2026-06-23 14:46:50,743 utils 25724 21956 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+DEBUG 2026-06-23 14:46:50,744 utils 25724 21956 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+DEBUG 2026-06-23 14:46:50,745 utils 25724 21956 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" IN ('session')); args=('sessions', 'session'); alias=default
+DEBUG 2026-06-23 14:46:50,746 utils 25724 21956 (0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(6,); alias=default
+DEBUG 2026-06-23 14:46:50,746 utils 25724 21956 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+DEBUG 2026-06-23 14:46:50,747 utils 25724 21956 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'django_app01'; args=('django_app01',); alias=default
+DEBUG 2026-06-23 14:46:50,747 utils 25724 21956 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'django_app01' AND "django_content_type"."model" IN ('subtask', 'category', 'task')); args=('django_app01', 'subtask', 'category', 'task'); alias=default
+DEBUG 2026-06-23 14:46:50,748 utils 25724 21956 (0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8, 9, 7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(8, 9, 7); alias=default
+DEBUG 2026-06-23 14:46:50,749 utils 25724 21956 (0.000) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'django_app01'; args=('django_app01',); alias=default
+DEBUG 2026-06-25 09:59:34,543 utils 15708 29580 (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+DEBUG 2026-06-25 09:59:34,546 utils 15708 29580 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default

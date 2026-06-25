@@ -5,13 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3dd7d45-1440-46a0-b731-b21cc1deb5bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/django_app01/pagination.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django_app01/permissions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DjangoProject2/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoProject2/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_app01/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_app01/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoProject2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoProject2/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_app01/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_app01/migrations/0002_alter_category_options_alter_subtask_options_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_app01/migrations/0003_category_deleted_at_category_is_deleted.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_app01/migrations/0004_alter_category_unique_together_and_more.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/django_app01/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_app01/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_app01/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_app01/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django_app01/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_app01/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_database" beforeDir="false" afterPath="$PROJECT_DIR$/test_database" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_app01/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_app01/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/db_logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/db_logs.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +67,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;HW__16&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;HW__18&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -138,7 +144,10 @@
       <workItem from="1781188405238" duration="2423000" />
       <workItem from="1781262288768" duration="7483000" />
       <workItem from="1781457337645" duration="537000" />
-      <workItem from="1781544670568" duration="3935000" />
+      <workItem from="1781544670568" duration="4704000" />
+      <workItem from="1782125125647" duration="4726000" />
+      <workItem from="1782160039673" duration="316000" />
+      <workItem from="1782210369853" duration="7340000" />
     </task>
     <servers />
   </component>
