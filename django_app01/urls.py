@@ -7,6 +7,11 @@ from .views import (
     TaskViewSet,
     SubTaskViewSet,
     CategoryViewSet,
+    RegisterView,
+    LoginView,
+    RefreshView,
+    LogoutView
+
 )
 
 router = DefaultRouter()
@@ -18,4 +23,12 @@ urlpatterns = [
     path('', hello),
     path('test/', TestAPIView.as_view(), name='test'),
     path('', include(router.urls)),
+
+    path("register/", RegisterView.as_view(), name="register"),
+
+    path("login/", LoginView.as_view(), name="login"),
+
+    path("refresh/", RefreshView.as_view(), name="refresh"),
+
+    path("logout/", LogoutView.as_view(), name="logout"),
 ]
