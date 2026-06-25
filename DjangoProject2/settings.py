@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_app01',
+    'django_app01.apps.DjangoApp01Config',
     'rest_framework',
     'django_filters',
     'drf_yasg',
@@ -196,7 +196,8 @@ LOGGING = {
     },
 }
 
-
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+DEFAULT_FROM_EMAIL = "noreply@example.com"
 
 
 LANGUAGE_CODE = 'en-us'
